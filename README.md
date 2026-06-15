@@ -10,7 +10,6 @@
 
 ## 📸 Project Screenshots
 
-> Create a folder called `/screenshots` in your repo and add images
 
 ### Search View
 <img width="1920" height="1143" alt="image" src="https://github.com/user-attachments/assets/b0d23731-4866-4155-93e5-2a4560cb296e" />
