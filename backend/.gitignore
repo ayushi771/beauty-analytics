@@ -1,0 +1,16 @@
+# Backend-specific ignores (most patterns are in root .gitignore)
+# This file can remain for clarity, but root .gitignore handles all patterns
+
+# Local development
+*.log
+.env.local
+
+# Backend data and cache
+data/raw/
+data/processed/
+data/exports/
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
