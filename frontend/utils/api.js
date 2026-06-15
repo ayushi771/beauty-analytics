@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: "https://ayuayuaayu-sephora-api.hf.space",
   timeout: 60000,
 });
 
