@@ -69,8 +69,38 @@ Deployment:
 ---
 
 ## 📦 Installation (Run Locally)
-
-### 1. Clone Repository
+1. Clone Repository
 ```bash
 git clone https://github.com/your-username/sephora-sentiment.git
 cd sephora-sentiment
+
+2. Backend Setup
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+Backend runs at:
+http://127.0.0.1:8000
+
+3. Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+Frontend runs at:
+http://localhost:5173
+🔑 Environment Variables
+
+Backend:
+
+GROQ_API_KEY=your_groq_api_key
+HF_TOKEN=your_huggingface_token (optional)
+
+Frontend:
+
+VITE_API_URL=https://ayuayuaayu-sephora-api.hf.space
+
+👩‍💻 Author
+Ayushi Somani
+
+⭐ If you like this project
+Star the repo ⭐ 
