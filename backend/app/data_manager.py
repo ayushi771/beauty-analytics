@@ -6,15 +6,24 @@ import pandas as pd
 import math
 import re
 from sentence_transformers import SentenceTransformer
-
+from huggingface_hub import hf_hub_download
 # ==================================================
 # PATHS
 # ==================================================
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data" / "processed"
-REVIEWS_FILE = DATA_DIR / "reviews_processed.csv"
-PRODUCTS_FILE = DATA_DIR / "products_processed.csv"
+REVIEWS_FILE = hf_hub_download(
+    repo_id="ayuayuaayu/sephora-data",
+    filename="reviews_processed.csv",
+    repo_type="dataset"
+)
+
+PRODUCTS_FILE = hf_hub_download(
+    repo_id="ayuayuaayu/sephora-data",
+    filename="products_processed.csv",
+    repo_type="dataset"
+)
 
 # ==================================================
 # GLOBAL CACHE
