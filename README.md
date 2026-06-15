@@ -69,8 +69,9 @@ Deployment:
 ---
 
 ## 📦 Installation (Run Locally)
-1. Clone Repository
+
 ```bash
+1. Clone Repository
 git clone https://github.com/your-username/sephora-sentiment.git
 cd sephora-sentiment
 
@@ -98,9 +99,3 @@ HF_TOKEN=your_huggingface_token (optional)
 Frontend:
 
 VITE_API_URL=https://ayuayuaayu-sephora-api.hf.space
-
-👩‍💻 Author
-Ayushi Somani
-
-⭐ If you like this project
-Star the repo ⭐ 
