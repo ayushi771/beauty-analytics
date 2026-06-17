@@ -224,9 +224,9 @@ const styles = {
     position: "relative",
     overflow: "hidden",
 
-    padding: 28,
+    padding: "clamp(18px, 3vw, 28px)",
 
-    borderRadius: 28,
+    borderRadius: "clamp(18px, 3vw, 28px)",
 
     background:
       "linear-gradient(155deg,#FFF6FA 0%,#FFFFFF 45%,#FFF2F7 100%)",
@@ -235,6 +235,9 @@ const styles = {
 
     boxShadow:
       "0 20px 50px -20px rgba(212,83,126,0.18)",
+
+    width: "100%",
+    boxSizing: "border-box",
   },
 
   blob: {
@@ -245,19 +248,17 @@ const styles = {
   },
 
   blob1: {
-    width: 220,
-    height: 220,
+    width: "min(220px, 35vw)",
+    height: "min(220px, 35vw)",
     top: -80,
     right: -60,
-   
   },
 
   blob2: {
-    width: 180,
-    height: 180,
+    width: "min(180px, 30vw)",
+    height: "min(180px, 30vw)",
     left: -50,
     bottom: -70,
-   
   },
 
   header: {
@@ -265,11 +266,15 @@ const styles = {
     gap: 14,
     alignItems: "center",
     marginBottom: 24,
+
+    flexWrap: "wrap",
   },
 
   iconWrap: {
     width: 40,
     height: 40,
+    minWidth: 40,
+
     borderRadius: 12,
 
     background:
@@ -284,14 +289,18 @@ const styles = {
 
   title: {
     margin: 0,
-    fontSize: 18,
+
+    fontSize: "clamp(16px, 2vw, 18px)",
+
     fontWeight: 700,
     color: "#331B25",
   },
 
   subtitle: {
     margin: "4px 0 0",
-    fontSize: 13,
+
+    fontSize: "clamp(12px, 1.8vw, 13px)",
+
     color: "#8A6B78",
   },
 
@@ -300,6 +309,7 @@ const styles = {
     alignItems: "center",
     gap: 12,
     padding: "20px 0",
+    flexWrap: "wrap",
   },
 
   spinner: {
@@ -308,8 +318,7 @@ const styles = {
     borderRadius: "50%",
     border: `2px solid ${PINK_BORDER}`,
     borderTopColor: PINK,
-    animation:
-      "spin 0.7s linear infinite",
+    animation: "spin 0.7s linear infinite",
   },
 
   loadingText: {
@@ -338,6 +347,9 @@ const styles = {
 
     fontWeight: 600,
     cursor: "pointer",
+
+    width: "fit-content",
+    maxWidth: "100%",
   },
 
   stack: {
@@ -360,58 +372,85 @@ const styles = {
 
     letterSpacing: "0.12em",
     textTransform: "uppercase",
+
+    flexWrap: "wrap",
   },
 
   verdictCard: {
-    padding: 20,
+    padding: "clamp(16px, 2vw, 20px)",
+
     borderRadius: 20,
+
     background:
       "linear-gradient(135deg,#FFF5F8,#FFFFFF)",
+
     border:
       "1px solid rgba(244,192,209,0.4)",
   },
 
   verdictText: {
     margin: 0,
-    fontSize: 15,
+
+    fontSize: "clamp(14px, 2vw, 15px)",
+
     lineHeight: 1.8,
+
     color: "#3D1F2D",
+
     fontWeight: 500,
   },
 
   grid: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
+
+    gridTemplateColumns:
+      "repeat(auto-fit, minmax(280px, 1fr))",
+
     gap: 16,
+
+    width: "100%",
   },
 
   goodCard: {
     padding: 18,
     borderRadius: 18,
+
     background: "#F4FFF7",
+
     border:
       "1px solid rgba(34,197,94,0.15)",
+
+    minWidth: 0,
   },
 
   warnCard: {
     padding: 18,
     borderRadius: 18,
+
     background: "#FFF8F1",
+
     border:
       "1px solid rgba(251,146,60,0.15)",
+
+    minWidth: 0,
   },
 
   bestForCard: {
     padding: 18,
+
     borderRadius: 18,
+
     background: "#FFF6FB",
+
     border:
       "1px solid rgba(244,192,209,0.4)",
   },
 
   bottomCard: {
     padding: 20,
+
     borderRadius: 20,
+
     background:
       "linear-gradient(135deg,#FFF9FB,#FFFDFD)",
 
@@ -421,16 +460,27 @@ const styles = {
 
   body: {
     margin: 0,
-    fontSize: 14,
+
+    fontSize: "clamp(13px, 1.8vw, 14px)",
+
     lineHeight: 1.8,
+
     color: "#4A2D3A",
+
+    wordBreak: "break-word",
   },
 
   bottomText: {
     margin: 0,
-    fontSize: 15,
+
+    fontSize: "clamp(14px, 2vw, 15px)",
+
     lineHeight: 1.8,
+
     color: "#3D1F2D",
+
     fontWeight: 600,
+
+    wordBreak: "break-word",
   },
 };
